@@ -2,6 +2,15 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
+install-gcp:
+	pip install --upgrade pip &&\
+		pip install -r requirements-gcp.txt
+
+
+install-aws:
+	pip install --upgrade pip &&\
+		pip install -r requirements-aws.txt
+
 install-azure:
 	pip install --upgrade pip &&\
 		pip install -r requirements-azure.txt
@@ -14,6 +23,5 @@ lint:
 	
 test:
 	python -m pytest -vv --cov=hello test_hello.py
-	
-all: install lint test
+
 	
